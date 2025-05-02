@@ -1,11 +1,16 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
+
+// FinalProjectAbraham.java
+// Created by Abraham Gonzalez
+
 public class Translator {
+    // HashMaps to store English to Spanish and Japanese (Romaji) translations
     static HashMap<String, String>englishToSpanish = new HashMap<>();
     static HashMap<String, String>englishToJapanese = new HashMap<>();
 
-
+//Spanish Translations and Japanse Translations
 public static void setupLanguageData() {
   englishToSpanish.put("hello","hola");
   englishToSpanish.put("goodbye","aidos");
@@ -23,6 +28,7 @@ public static void setupLanguageData() {
   
 }
 
+// Shows the menu when the user wants to select language or exit
 public static void displayAnyAvailableWords(HashMap<String, String> dict, String language) {
     System.out.println("Available " + language + "translations");
     for (String key : dict.keySet()) {
@@ -40,13 +46,13 @@ public static void displayMenu() {
     
 }
 
-
+// Using the main method: it can handle the program flow and understand the users interaction.
 public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    setupLanguageData();
+    Scanner scanner = new Scanner(System.in); // Scanner for the input from the user
+    setupLanguageData(); // Load the data
 
     while(true){
-        displayMenu();
+        displayMenu(); // Show the menu to the user
         String input = scanner.nextLine();
         int choice;
 
@@ -55,9 +61,9 @@ public static void main(String[] args) {
         }  catch (NumberFormatException e) {
             System.out.println("Please enter a number (1, 2, or 3). ");
             continue;
-        
+        }
 
-
+     //Translations paths and exit option
     } if (choice == 1) {
         displayAnyAvailableWords( englishToSpanish, "Spanish");
         System.out.println("Enter English word: ");
@@ -78,7 +84,7 @@ public static void main(String[] args) {
 
         }
     }
-    scanner.close();
+    scanner.close(); //Close the input scanner
    }
 }
 
