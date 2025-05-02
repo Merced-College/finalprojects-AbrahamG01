@@ -1,1 +1,4 @@
+FinalProjectAbraham.java - Multilingual Translator App
 
+I built a multilingual translator app in Java. The main objective is to allow users to translate basic English words to Spanish or Japanese (Romaji) through a menu-driven interface. It uses HashMaps to store the dictionary data, and can see the translation. I also created the core class structure, added a working menu system, and implemented two language dictionaries (Spanish and Japanese). I built a method to display any available translations. Also, I included a basic input validation to detect errors to handle invalid menu choices. The code is structured clearly and includes comments.
+I may plan to make possible expansions on the feature.
